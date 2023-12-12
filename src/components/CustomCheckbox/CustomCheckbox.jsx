@@ -1,3 +1,4 @@
+import CustomLabel from "../CustomLabel/CustomLabel";
 import { useField } from "formik";
 
 export default function CustomCheckbox({ label, ...props }) {
@@ -5,9 +6,7 @@ export default function CustomCheckbox({ label, ...props }) {
 
   return (
     <>
-      {meta.touched && meta.error && (
-        <div className="text-red-600 m-2">{meta.error}</div>
-      )}
+      <CustomLabel meta={meta}>{label}</CustomLabel>
       <div>
         <input
           {...field}

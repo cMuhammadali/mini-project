@@ -1,3 +1,4 @@
+import CustomLabel from "../CustomLabel/CustomLabel";
 import { useField } from "formik";
 
 export default function CustomSelect({ label, ...props }) {
@@ -5,10 +6,7 @@ export default function CustomSelect({ label, ...props }) {
 
   return (
     <>
-      <label className="mr-2 text-xl">{label}</label>
-      {meta.touched && meta.error && (
-        <div className="text-red-600 m-2">{meta.error}</div>
-      )}
+      <CustomLabel meta={meta}>{label}</CustomLabel>
       <select
         {...field}
         {...props}

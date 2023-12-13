@@ -73,6 +73,7 @@ function App() {
         />
         <Route path="/todo" element={<Todo />} />
         <Route path="/formik" element={<FormikFunc />} />
+        <Route path="/*" element={<h2>Page not found</h2>} />
       </Routes>
     </div>
   );
